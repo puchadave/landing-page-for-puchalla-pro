@@ -4,9 +4,9 @@ import {
   ArrowUpRight,
   Award,
   Boxes,
+  Code2,
+  Contact,
   FlaskConical,
-  Github,
-  Linkedin,
   Network,
   ShieldCheck,
 } from "lucide-react"
@@ -168,7 +168,7 @@ export default function Page() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-sm border border-border bg-surface px-5 py-3 text-sm font-semibold hover:border-signal/60"
                 >
-                  <Github className="h-4 w-4" /> GitHub
+                  <Code2 className="h-4 w-4" /> GitHub
                 </a>
               </div>
             </div>
@@ -193,7 +193,7 @@ export default function Page() {
                   rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-sm border border-border bg-background px-3 py-2.5 text-xs font-semibold hover:border-signal/60"
                 >
-                  <Linkedin className="h-4 w-4" /> LinkedIn
+                  <Contact className="h-4 w-4" /> LinkedIn
                 </a>
                 <a
                   href="https://orcid.org/0009-0002-0223-0929"
