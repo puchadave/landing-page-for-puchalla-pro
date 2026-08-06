@@ -10,6 +10,12 @@ export const metadata: Metadata = {
     "Durchsuchbares Zertifikatsportfolio von David Puchalla mit Nachweisen zu OSINT, Data Analytics, Cybersecurity, Systemarchitektur, Marketing, Vertrieb und Recht.",
 }
 
+const STATS = [
+  { value: String(certificates.length), label: "strukturierte Nachweise", icon: Award },
+  { value: "6", label: "Fachkategorien", icon: Database },
+  { value: "1", label: "versionierte Datenquelle", icon: ShieldCheck },
+]
+
 export default function CertificatesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -63,15 +69,11 @@ export default function CertificatesPage() {
             </div>
 
             <div className="mt-12 grid gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-3">
-              {[
-                [String(certificates.length), "strukturierte Nachweise", Award],
-                ["6", "Fachkategorien", Database],
-                ["1", "versionierte Datenquelle", ShieldCheck],
-              ].map(([value, label, Icon]) => (
-                <div key={String(label)} className="bg-background px-6 py-7">
+              {STATS.map(({ value, label, icon: Icon }) => (
+                <div key={label} className="bg-background px-6 py-7">
                   <Icon className="h-5 w-5 text-signal" />
-                  <div className="mt-4 font-mono text-3xl font-semibold text-foreground">{String(value)}</div>
-                  <div className="mt-2 text-sm text-muted-foreground">{String(label)}</div>
+                  <div className="mt-4 font-mono text-3xl font-semibold text-foreground">{value}</div>
+                  <div className="mt-2 text-sm text-muted-foreground">{label}</div>
                 </div>
               ))}
             </div>
