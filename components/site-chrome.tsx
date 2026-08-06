@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react"
 
 const LINKS = [
-  { href: "/", label: "Übersicht" },
-  { href: "/products/", label: "Produkte" },
+  { href: "/", label: "Portfolio" },
+  { href: "/certificates/", label: "Zertifikate" },
   { href: "/research/", label: "Research" },
+  { href: "/products/", label: "Produkte" },
   { href: "https://github.com/puchadave", label: "GitHub", external: true },
 ]
 
@@ -37,7 +38,7 @@ export function SiteHeader() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Hauptnavigation">
+        <nav className="hidden items-center gap-6 md:flex" aria-label="Hauptnavigation">
           {LINKS.map((link) => (
             <a
               key={link.href}
@@ -78,12 +79,13 @@ export function SiteFooter() {
             </span>
           </div>
           <p className="mt-3 max-w-xl text-sm leading-6 text-muted-foreground">
-            B2B-Katalog, Systemarchitektur und das wissenschaftliche Portfolio des webOwie Research Lab.
+            Portfolio, Systemarchitektur, verifizierte Qualifikationen und das wissenschaftliche Profil des webOwie Research Lab.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-5 text-xs text-muted-foreground">
           <a href="https://orcid.org/0009-0002-0223-0929" target="_blank" rel="me noreferrer" className="hover:text-foreground">ORCID</a>
           <a href="https://github.com/puchadave" target="_blank" rel="noreferrer" className="hover:text-foreground">GitHub</a>
+          <a href="/certificates/" className="hover:text-foreground">Zertifikate</a>
           <a href="/research/" className="hover:text-foreground">Research</a>
         </div>
       </div>
