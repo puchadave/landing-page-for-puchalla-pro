@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { ArrowUpRight, BookOpen, Database, FlaskConical, Github, Network } from "lucide-react"
+import { ArrowUpRight, BookOpen, Database, FlaskConical, Network } from "lucide-react"
 import { SiteFooter, SiteHeader } from "@/components/site-chrome"
 
 export const metadata: Metadata = {
@@ -96,7 +96,7 @@ export default function ResearchPage() {
                 ORCID <ArrowUpRight className="h-4 w-4" />
               </a>
               <a href="https://github.com/puchadave" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-sm border border-border bg-surface px-4 py-2.5 text-sm font-semibold hover:border-signal/60">
-                <Github className="h-4 w-4" /> GitHub
+                GitHub <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -145,7 +145,7 @@ export default function ResearchPage() {
         <section className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:px-8">
           <div>
             <div className="flex items-center gap-3">
-              <Github className="h-5 w-5 text-signal" />
+              <Network className="h-5 w-5 text-signal" />
               <h2 className="text-2xl font-semibold">Research Outputs</h2>
             </div>
             <div className="mt-6 divide-y divide-border rounded-md border border-border bg-card">
