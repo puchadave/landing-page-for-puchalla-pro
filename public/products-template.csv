@@ -1,0 +1,2 @@
+sku,name,category,description,manufacturer,unit,image,datasheet,inquiryUrl,tags
+SKU-0001,Beispielprodukt,Kategorie,"Sachliche Produktbeschreibung mit den wichtigsten technischen und kaufrelevanten Angaben.",Hersteller,Stück,/products/example.webp,/datasheets/example.pdf,https://www.linkedin.com/in/davidpuchalla/,merkmal-1|merkmal-2
