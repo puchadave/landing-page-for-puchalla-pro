@@ -1,0 +1,85 @@
+#title: david-puchalla-profile
+#direction: right
+#background: transparent
+#fill: #0b1220; #101a2d; #132238; #172a44
+#stroke: #8da2bd
+#font: Arial
+#fontSize: 12
+#padding: 10
+#spacing: 55
+#edges: rounded
+
+/** Public portfolio root. Actual records are rendered by puchalla.pro/profile-graph/. */
+entity Person {
+  name String required
+  headline String
+  website String
+}
+
+entity Organization {
+  name String required
+  organizationType String
+  website String
+}
+
+entity Employment {
+  title String required
+  startYear Integer
+  endYear Integer
+  current Boolean
+  summary String
+}
+
+entity Education {
+  title String required
+  startYear Integer
+  endYear Integer
+  credential String
+}
+
+entity Qualification {
+  title String required
+  issuedYear Integer
+  category String
+  credentialId String
+  verificationUrl String
+}
+
+entity Skill {
+  name String required
+  category String
+}
+
+entity Project {
+  name String required
+  projectType String
+  status String
+  url String
+}
+
+entity ResearchProfile {
+  platform String required
+  identifier String
+  url String
+}
+
+relationship OneToMany {
+  Person{employments} to Employment{person},
+  Person{educations} to Education{person},
+  Person{qualifications} to Qualification{person},
+  Person{projects} to Project{person},
+  Person{researchProfiles} to ResearchProfile{person}
+}
+
+relationship ManyToOne {
+  Employment{organization(name)} to Organization,
+  Education{institution(name)} to Organization,
+  Qualification{issuer(name)} to Organization
+}
+
+relationship ManyToMany {
+  Person{skills(name)} to Skill{people},
+  Employment{skills(name)} to Skill{employments},
+  Qualification{skills(name)} to Skill{qualifications},
+  Project{skills(name)} to Skill{projects}
+}
