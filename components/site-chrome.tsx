@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 
 const LINKS = [
   { href: "/", label: "Portfolio" },
+  { href: "/profile-graph/", label: "Profilgraph" },
   { href: "/certificates/", label: "Zertifikate" },
   { href: "/research/", label: "Research" },
   { href: "/products/", label: "Produkte" },
@@ -85,6 +86,7 @@ export function SiteFooter() {
         <div className="flex flex-wrap items-center gap-5 text-xs text-muted-foreground">
           <a href="https://orcid.org/0009-0002-0223-0929" target="_blank" rel="me noreferrer" className="hover:text-foreground">ORCID</a>
           <a href="https://github.com/puchadave" target="_blank" rel="noreferrer" className="hover:text-foreground">GitHub</a>
+          <a href="/profile-graph/" className="hover:text-foreground">Profilgraph</a>
           <a href="/certificates/" className="hover:text-foreground">Zertifikate</a>
           <a href="/research/" className="hover:text-foreground">Research</a>
         </div>
